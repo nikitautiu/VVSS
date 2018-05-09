@@ -110,7 +110,8 @@ public class Employee {
 	@Override
 	public String toString() {
 		String employee = "";
-		
+
+		employee += firstName + ";";
 		employee += lastName + ";";
 		employee += cnp + ";";
 		employee += function.toString() + ";";
@@ -150,6 +151,7 @@ public class Employee {
 			throw new EmployeeException("Invalid line at: " + line);
 		} else {
 			EmployeeValidator validator = new EmployeeValidator();
+			employee.setFirstName(attributes[0]);
 			employee.setLastName(attributes[1]);
 			employee.setCnp(attributes[2]);
 			
